@@ -500,6 +500,119 @@
     padding-right: 16px !important;
   }
 
+
+  /* ── HERO PADDING ──────────────────────────── */
+  #hero { padding: 70px 16px 40px !important; }
+
+  /* ── FEATURED PROJECT GRID ─────────────────── */
+  .project-featured { grid-template-columns: 1fr !important; }
+  .project-name { font-size: clamp(40px, 12vw, 64px) !important; }
+  .profile-name { font-size: clamp(44px, 13vw, 72px) !important; }
+
+  /* ── SOCIAL LINKS — stack vertically ────────── */
+  #cese-annexe ~ div[style*="display:flex"][style*="gap:2px"] {
+    flex-direction: column !important;
+  }
+  #cese-annexe ~ div[style*="display:flex"][style*="gap:2px"] > a {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── FOOTER ────────────────────────────────── */
+  footer {
+    flex-direction: column !important;
+    gap: 12px !important;
+    text-align: center !important;
+    padding: 24px 16px !important;
+  }
+  .footer-info { text-align: center !important; }
+  .footer-status { text-align: center !important; }
+
+  /* ── RESULTS TABLE — horizontal scroll ─────── */
+  .results-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .results-table thead, .results-table tbody, .results-table tr { min-width: 500px; }
+  .results-table th, .results-table td { white-space: nowrap; padding: 12px 14px !important; }
+
+  /* ── FREQUENCY OUTPUT BAR ──────────────────── */
+  #cese-annexe div[style*="display:flex"][style*="gap:24px"][style*="align-items:center"] {
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: stretch !important;
+  }
+  #cese-annexe div[style*="writing-mode:vertical"] {
+    writing-mode: horizontal-tb !important;
+    transform: none !important;
+  }
+
+  /* ── TERMINAL ──────────────────────────────── */
+  .terminal { max-width: 100% !important; }
+  .terminal-line { font-size: 10px !important; word-break: break-all; }
+
+  /* ── SECTION TITLES — responsive clamp ─────── */
+  .section-title { font-size: clamp(40px, 12vw, 64px) !important; }
+
+  /* ── BTN FULL WIDTH ────────────────────────── */
+  .btn { width: 100%; justify-content: center; text-align: center; }
+
+  /* ── PREVENT HORIZONTAL SCROLL ─────────────── */
+  html, body { overflow-x: hidden !important; }
+  * { max-width: 100vw; }
+
+  /* ── AUDIO MODULES — visual bars ────────────── */
+  .module-name { font-size: clamp(28px, 8vw, 36px) !important; }
+
+  /* ── ENTITY CARDS ──────────────────────────── */
+  .entity-name { font-size: clamp(32px, 10vw, 42px) !important; }
+  .entity-id { font-size: 48px !important; }
+  .pc-id { font-size: 40px !important; }
+  .pc-name { font-size: clamp(32px, 10vw, 40px) !important; }
+
+  /* ── STAT VALUES ───────────────────────────── */
+  .stat-val { font-size: clamp(28px, 8vw, 42px) !important; }
+
+  /* ── CONTACT FORM AREA ─────────────────────── */
+  .contact-form-area { padding: 28px 16px !important; }
+  .contact-form-area h2 { font-size: clamp(36px, 10vw, 52px) !important; }
+}
+
+/* ════════════════════════════════════════════════
+   RESPONSIVE — TABLET  769px – 1024px
+   Desktop layout is completely untouched above
+════════════════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav { padding: 14px 24px; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 9px; }
+
+  section { padding: 60px 24px !important; }
+
+  .profile-grid { grid-template-columns: 1fr !important; }
+  .services-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .projects-secondary { grid-template-columns: 1fr !important; }
+  .project-featured { grid-template-columns: 1fr !important; }
+  .project-featured-visual { display: none !important; }
+  .testi-grid { grid-template-columns: 1fr !important; }
+  .contact-grid { grid-template-columns: 1fr !important; }
+
+  /* CESE grids */
+  [style*="grid-template-columns:repeat(3,1fr)"],
+  [style*="grid-template-columns: repeat(3,1fr)"],
+  [style*="grid-template-columns:repeat(3, 1fr)"],
+  [style*="grid-template-columns: repeat(3, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  [style*="grid-template-columns:1fr 340px"],
+  [style*="grid-template-columns: 1fr 340px"],
+  [style*="grid-template-columns:280px 1fr"],
+  [style*="grid-template-columns: 280px 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  [style*="grid-template-columns:repeat(5"],
+  [style*="grid-template-columns: repeat(5"] {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  footer { padding: 24px; }
 }
 </style>
 </head>
