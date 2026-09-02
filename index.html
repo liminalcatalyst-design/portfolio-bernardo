@@ -337,6 +337,112 @@
   ::-webkit-scrollbar-thumb { background: var(--red-dim); }
   ::-webkit-scrollbar-thumb:hover { background: var(--red); }
 
+  /* ════════════════════════════════════════════════
+     SECTION 07 — EJECUTABLES
+     ════════════════════════════════════════════════ */
+  .executables-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .executable-card {
+    background: #0f0f0f;
+    border-left: 2px solid var(--red);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .executable-card:hover { border-left-color: #ff2a1f; }
+  .executable-card::before,
+  .executable-card::after {
+    content: '+';
+    position: absolute;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 14px;
+    color: var(--grey);
+    line-height: 1;
+    z-index: 2;
+  }
+  .executable-card::before { top: 10px; left: 10px; }
+  .executable-card::after { bottom: 10px; right: 10px; }
+  .executable-visual {
+    aspect-ratio: 9 / 19.5;
+    overflow: hidden;
+    border-bottom: 1px solid #1e1e1e;
+    background: var(--bg3);
+  }
+  .executable-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #1e1e1e;
+    display: block;
+    transition: transform 0.2s;
+  }
+  .executable-card:hover .executable-visual img { transform: translateY(-2px); }
+  .executable-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+  }
+  .executable-kanji {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+  .executable-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    line-height: 0.95;
+    color: var(--white);
+    letter-spacing: 0.04em;
+  }
+  .executable-path {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    color: var(--grey);
+    letter-spacing: 0.15em;
+  }
+  .executable-desc {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    color: var(--grey-light);
+    line-height: 1.8;
+    flex: 1;
+  }
+  .executable-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .executable-tag {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    color: var(--grey);
+    letter-spacing: 0.1em;
+    padding: 4px 8px;
+    border: 1px solid var(--border);
+    text-transform: uppercase;
+  }
+  .executables-footer {
+    margin-top: 32px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    color: var(--grey);
+    letter-spacing: 0.15em;
+    text-align: left;
+  }
+
 /* ════════════════════════════════════════════════
    RESPONSIVE — MOBILE FIRST  ≤ 768px
    Desktop layout is completely untouched above
